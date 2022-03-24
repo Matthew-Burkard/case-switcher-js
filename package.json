@@ -1,0 +1,18 @@
+{
+  "name": "case-switcher",
+  "version": "0.1.0",
+  "description": "Library to change the casing convention of strings",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.6.2",
+    "prettier": "2.6.0"
+  }
+}
