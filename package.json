@@ -1,14 +1,14 @@
 {
   "name": "case-switcher",
-  "version": "0.11.0",
+  "version": "0.11.1",
   "description": "Library to change the casing convention of strings",
   "main": "index.js",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "build": "tsc"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["string", "string manipulation", "case convention"],
+  "author": "Matthew Burkard",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.0",
