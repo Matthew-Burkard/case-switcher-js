@@ -16,7 +16,7 @@ export function toCamel(str: string): string {
  * Return a version of the string in dot.case format.
  */
 export function toDot(str: string): string {
-  return str;
+  return getWords(str).map(w => w.toLowerCase()).join(".");
 }
 
 /*
