@@ -58,7 +58,7 @@ export function toUpperDot(str: string): string {
  * Return a version of the string in UPPER-KEBAB-CASE format.
  */
 export function toUpperKebab(str: string): string {
-  return str;
+  return getWords(str).map(w => w.toUpperCase()).join("-");
 }
 
 /*
