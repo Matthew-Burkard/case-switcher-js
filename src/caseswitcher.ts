@@ -37,7 +37,7 @@ export function toPascal(str: string): string {
  * Return a version of the string in snake_case format.
  */
 export function toSnake(str: string): string {
-  return str;
+  return getWords(str).map(w => w.toLowerCase()).join("_");
 }
 
 /*
