@@ -51,7 +51,7 @@ export function toTitle(str: string): string {
  * Return a version of the string in UPPER.DOT.CASE format.
  */
 export function toUpperDot(str: string): string {
-  return str;
+  return getWords(str).map(w => w.toUpperCase()).join(".");
 }
 
 /*
