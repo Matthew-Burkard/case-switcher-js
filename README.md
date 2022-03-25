@@ -38,7 +38,7 @@ Supported cases:
 ### Install
 
 ```shell
-npm install case-switcher-js
+npm i case-switcher-js
 ```
 
 ```shell
