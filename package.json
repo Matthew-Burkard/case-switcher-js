@@ -1,6 +1,6 @@
 {
   "name": "case-switcher-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library to change the casing convention of strings",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
