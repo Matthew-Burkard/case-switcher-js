@@ -1,8 +1,9 @@
 {
   "name": "case-switcher",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "Library to change the casing convention of strings",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "build": "tsc"

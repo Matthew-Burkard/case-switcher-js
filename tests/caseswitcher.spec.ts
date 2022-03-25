@@ -12,7 +12,7 @@ import {
   toUpperDot,
   toUpperKebab,
   toUpperSnake,
-} from "../src/caseswitcher";
+} from "../src";
 
 const camelSample = "coffeeJSONDonut";
 const dotSample = "coffee.json.donut";
