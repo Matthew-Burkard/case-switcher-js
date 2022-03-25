@@ -30,7 +30,7 @@ export function toKebab(str: string): string {
  * Return a version of the string in PascalCase format.
  */
 export function toPascal(str: string): string {
-  return str;
+  return getWords(str).map(capitalizeOrAllCaps).join("");
 }
 
 /*
