@@ -2,70 +2,79 @@
  * Return a version of the string in camelCase format.
  */
 export function toCamel(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in dot.case format.
  */
 export function toDot(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in kebab-case format.
  */
 export function toKebab(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in PascalCase format.
  */
 export function toPascal(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in snake_case format.
  */
 export function toSnake(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in Title Case format.
  */
 export function toTitle(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in UPPER.DOT.CASE format.
  */
 export function toUpperDot(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in UPPER-KEBAB-CASE format.
  */
 export function toUpperKebab(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Return a version of the string in UPPER_SNAKE_CASE format.
  */
 export function toUpperSnake(str: string): string {
-  return "";
+  return str;
 }
 
 /*
  * Get an array of the words in a string in the order they appear.
  */
-export function getWords(str: string): string {
-  return "";
+export function getWords(str: string): string[] {
+  let words = str
+    .split(/\b|_/)
+    .filter((s) => !["", ".", " ", "-", "_"].includes(s));
+  // Split on lower then upper: "oneTwo" -> ["one", "Two"]
+  words = splitWordsOnRegex(words, /(?<=[a-z])(?=[A-Z])/);
+  // Split on upper then upper + lower: "JSONWord" -> ["JSON", "Word"]
+  words = splitWordsOnRegex(words, /(?<=[A-Z])(?=[A-Z][a-z])/);
+  // Split on number + letter: "TO1Cat23dog" -> ["TO1", "Cat23", "dog"]
+  words = splitWordsOnRegex(words, /(?<=\d)(?=[A-Za-z])/);
+  return words;
 }
 
 /*
@@ -81,8 +90,22 @@ export function capitalize(word: string): string {
 /*
  * Return true if the string is an uppercase string, else false.
  */
-function isUpper(str: string): boolean {
+export function isUpper(str: string): boolean {
   return (str.match(/[A-Z]/) && !str.match(/[a-z]/)) ?? false;
+}
+
+function splitWordsOnRegex(words: string[], regExp: RegExp): string[] {
+  let copiedWords = words.map((it) => it);
+  for (const [index, word] of copiedWords.entries()) {
+    let splitWords = word.split(regExp);
+    if (splitWords.length > 1) {
+      copiedWords.splice(index, 1);
+      for (const [swIndex, splitWord] of splitWords.entries()) {
+        copiedWords.splice(index + swIndex, 0, splitWord);
+      }
+    }
+  }
+  return copiedWords;
 }
 
 function capitalizeOrAllCaps(word: string): string {
