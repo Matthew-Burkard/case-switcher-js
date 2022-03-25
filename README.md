@@ -5,10 +5,10 @@
   <h3>Change the casing of a string.</h3>
 <!-- Labels: -->
   <!-- First row: -->
-  <img src="https://img.shields.io/npm/l/case-switcher"
+  <img src="https://img.shields.io/npm/l/case-switcher-js"
    height="20"
    alt="License">
-  <img src="https://img.shields.io/npm/v/case-switcher"
+  <img src="https://img.shields.io/npm/v/case-switcher-js"
    height="20"
    alt="npm version">
   <img src="https://img.shields.io/badge/coverage-100%25-success"
@@ -58,7 +58,7 @@ import {
   toUpperDot,
   toUpperKebab,
   toUpperSnake,
-} from "case-switcher"
+} from "case-switcher-js"
 
 let sample = "avocado bagel-coffeeDONUTEclair_food.gravy"
 
