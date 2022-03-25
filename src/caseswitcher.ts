@@ -2,7 +2,14 @@
  * Return a version of the string in camelCase format.
  */
 export function toCamel(str: string): string {
-  return str;
+  let words = getWords(str);
+  let firstWord = "";
+  if (words.length > 0) {
+    firstWord = isUpper(words[0]) ? words[0] : words[0].toLowerCase();
+  }
+  return (
+    firstWord + words.slice(1, words.length).map(capitalizeOrAllCaps).join("")
+  );
 }
 
 /*
