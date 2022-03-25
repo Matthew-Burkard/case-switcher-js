@@ -44,7 +44,7 @@ export function toSnake(str: string): string {
  * Return a version of the string in Title Case format.
  */
 export function toTitle(str: string): string {
-  return str;
+  return getWords(str).map(capitalizeOrAllCaps).join(" ");
 }
 
 /*
