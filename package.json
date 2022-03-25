@@ -1,6 +1,6 @@
 {
   "name": "case-switcher",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "description": "Library to change the casing convention of strings",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "keywords": ["string", "string manipulation", "case convention"],
   "author": "Matthew Burkard",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.1.0",
