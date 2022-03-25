@@ -5,9 +5,9 @@
   <h3>Change the casing of a string.</h3>
 <!-- Labels: -->
   <!-- First row: -->
-  <img src="https://img.shields.io/npm/l/case-switcher-js"
+  <img src="https://img.shields.io/badge/license-MIT-green"
    height="20"
-   alt="License">
+   alt="License: MIT">
   <img src="https://img.shields.io/npm/v/case-switcher-js"
    height="20"
    alt="npm version">
@@ -38,11 +38,11 @@ Supported cases:
 ### Install
 
 ```shell
-npm install case-switcher
+npm install case-switcher-js
 ```
 
 ```shell
-yarn add case-switcher
+yarn add case-switcher-js
 ```
 
 ### Demo
