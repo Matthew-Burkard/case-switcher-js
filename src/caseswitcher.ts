@@ -23,7 +23,7 @@ export function toDot(str: string): string {
  * Return a version of the string in kebab-case format.
  */
 export function toKebab(str: string): string {
-  return str;
+  return getWords(str).map(w => w.toLowerCase()).join("-");
 }
 
 /*
