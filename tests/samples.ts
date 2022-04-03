@@ -2,6 +2,7 @@ export const camelSample = "coffeeJSONDonut";
 export const dotSample = "coffee.json.donut";
 export const kebabSample = "coffee-json-donut";
 export const pascalSample = "CoffeeJSONDonut";
+export const pathSample = "coffee/json/donut";
 export const snakeSample = "coffee_json_donut";
 export const titleSample = "Coffee JSON Donut";
 export const mixedSample = "avocado bagel-coffeeDONUTEclair_food.gravy";

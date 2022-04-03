@@ -9,9 +9,10 @@ import {
   mixedSample,
   numbersSample,
   pascalSample,
+  pathSample,
   snakeSample,
   titleSample,
-// @ts-ignore
+  // @ts-ignore
 } from "./samples";
 
 describe("Capitalize", () => {
@@ -56,6 +57,11 @@ describe("Get Words", () => {
   describe("Get words from PascalCase string.", () => {
     it(`From ${pascalSample}.`, () => {
       expect(getWords(pascalSample)).to.members(["Coffee", "JSON", "Donut"]);
+    });
+  });
+  describe("Get words from path/case string.", () => {
+    it(`From ${pathSample}.`, () => {
+      expect(getWords(pathSample)).to.members(["coffee", "json", "donut"]);
     });
   });
   describe("Get words from snake_case string.", () => {

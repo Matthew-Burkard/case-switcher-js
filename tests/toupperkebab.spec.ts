@@ -9,6 +9,7 @@ import {
   loneWordSample,
   mixedSample,
   pascalSample,
+  pathSample,
   snakeSample,
   titleSample,
   // @ts-ignore
@@ -33,6 +34,11 @@ describe("To UPPER-KEBAB-CASE", () => {
   describe("To upper kebab from pascal", () => {
     it(`From ${pascalSample}.`, () => {
       expect(toUpperKebab(pascalSample)).to.equal("COFFEE-JSON-DONUT");
+    });
+  });
+  describe("To upper kebab from path", () => {
+    it(`From ${pathSample}.`, () => {
+      expect(toUpperKebab(pathSample)).to.equal("COFFEE-JSON-DONUT");
     });
   });
   describe("To upper kebab from snake", () => {

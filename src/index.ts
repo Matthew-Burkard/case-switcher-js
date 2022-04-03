@@ -34,6 +34,13 @@ export function toPascal(str: string): string {
 }
 
 /*
+ * Return a version of the string in path/case format.
+ */
+export function toPath(str: string): string {
+  return getWords(str).map(w => w.toLowerCase()).join("/");
+}
+
+/*
  * Return a version of the string in snake_case format.
  */
 export function toSnake(str: string): string {
@@ -74,7 +81,7 @@ export function toUpperSnake(str: string): string {
 export function getWords(str: string): string[] {
   let words = str
     .split(/\b|_/)
-    .filter((s) => !["", ".", " ", "-", "_"].includes(s));
+    .filter((s) => s.match(/[\d\w]/));
   // Split on lower then upper: "oneTwo" -> ["one", "Two"]
   words = splitWordsOnRegex(words, /(?<=[a-z])(?=[A-Z])/);
   // Split on upper then upper + lower: "JSONWord" -> ["JSON", "Word"]

@@ -9,6 +9,7 @@ import {
   loneWordSample,
   mixedSample,
   pascalSample,
+  pathSample,
   snakeSample,
   titleSample,
   // @ts-ignore
@@ -33,6 +34,11 @@ describe("To UPPER.DOT.CASE", () => {
   describe("To upper dot from pascal", () => {
     it(`From ${pascalSample}.`, () => {
       expect(toUpperDot(pascalSample)).to.equal("COFFEE.JSON.DONUT");
+    });
+  });
+  describe("To upper dot from snake", () => {
+    it(`From ${pathSample}.`, () => {
+      expect(toUpperDot(pathSample)).to.equal("COFFEE.JSON.DONUT");
     });
   });
   describe("To upper dot from snake", () => {

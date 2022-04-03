@@ -9,6 +9,7 @@ import {
   loneWordSample,
   mixedSample,
   pascalSample,
+  pathSample,
   snakeSample,
   titleSample,
   // @ts-ignore
@@ -38,6 +39,11 @@ describe("To kebab-case", () => {
   describe("To kebab from snake", () => {
     it(`From ${snakeSample}.`, () => {
       expect(toKebab(snakeSample)).to.equal("coffee-json-donut");
+    });
+  });
+  describe("To kebab from path", () => {
+    it(`From ${pathSample}.`, () => {
+      expect(toKebab(pathSample)).to.equal("coffee-json-donut");
     });
   });
   describe("To kebab from title", () => {

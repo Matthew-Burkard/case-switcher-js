@@ -9,6 +9,7 @@ import {
   loneWordSample,
   mixedSample,
   pascalSample,
+  pathSample,
   snakeSample,
   titleSample,
   // @ts-ignore
@@ -33,6 +34,11 @@ describe("To Title Case", () => {
   describe("To title from pascal", () => {
     it(`From ${pascalSample}.`, () => {
       expect(toTitle(pascalSample)).to.equal("Coffee JSON Donut");
+    });
+  });
+  describe("To title from path", () => {
+    it(`From ${pathSample}.`, () => {
+      expect(toTitle(pathSample)).to.equal("Coffee Json Donut");
     });
   });
   describe("To title from snake", () => {
