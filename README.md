@@ -29,6 +29,7 @@ Supported cases:
 - dot.case
 - kebab-case
 - PascalCase
+- path/case
 - snake_case
 - Title Case
 - UPPER.DOT.CASE
@@ -53,6 +54,7 @@ import {
   toDot,
   toKebab,
   toPascal,
+  toPath,
   toSnake,
   toTitle,
   toUpperDot,
@@ -66,6 +68,7 @@ toCamel(sample)  // -> "avocadoBagelCoffeeDONUTEclairFoodGravy"
 toDot(sample)  // -> "avocado.bagel.coffee.donut.eclair.food.gravy"
 toKebab(sample)  // -> "avocado-bagel-coffee-donut-eclair-food-gravy"
 toPascal(sample)  // -> "AvocadoBagelCoffeeDONUTEclairFoodGravy"
+toPath(sample)  // -> "avocado/bagel/coffee/donut/eclair/food/gravy"
 toSnake(sample)  // -> "avocado_bagel_coffee_donut_eclair_food_gravy"
 toTitle(sample)  // -> "Avocado Bagel Coffee DONUT Eclair Food Gravy"
 toUpperDot(sample)  // -> "AVOCADO.BAGEL.COFFEE.DONUT.ECLAIR.FOOD.GRAVY"
