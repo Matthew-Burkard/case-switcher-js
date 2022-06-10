@@ -12,7 +12,6 @@ import {
   pathSample,
   snakeSample,
   titleSample,
-  // @ts-ignore
 } from "./samples";
 
 describe("To UPPER_SNAKE_CASE", () => {
