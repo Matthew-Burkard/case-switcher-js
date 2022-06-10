@@ -2,7 +2,7 @@
  * Return a version of the string in camelCase format.
  */
 export function toCamel(str: string): string {
-  let words = getWords(str);
+  const words = getWords(str);
   let firstWord = "";
   if (words.length > 0) {
     firstWord = isUpper(words[0]) ? words[0] : words[0].toLowerCase();
@@ -111,7 +111,7 @@ export function isUpper(str: string): boolean {
 function splitWordsOnRegex(words: string[], regExp: RegExp): string[] {
   let copiedWords = words.map((it) => it);
   for (const [index, word] of copiedWords.entries()) {
-    let splitWords = word.split(regExp);
+    const splitWords = word.split(regExp);
     if (splitWords.length > 1) {
       copiedWords.splice(index, 1);
       for (const [swIndex, splitWord] of splitWords.entries()) {
