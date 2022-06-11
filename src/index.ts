@@ -109,7 +109,7 @@ export function isUpper(str: string): boolean {
 }
 
 function splitWordsOnRegex(words: string[], regExp: RegExp): string[] {
-  let copiedWords = words.map((it) => it);
+  const copiedWords = words.map((it) => it);
   for (const [index, word] of copiedWords.entries()) {
     const splitWords = word.split(regExp);
     if (splitWords.length > 1) {
